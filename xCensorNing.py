@@ -65,7 +65,7 @@ def file_namel2pathl(file_list: list, file_path):
     return file_list
 
 
-NEIGHBOR = 0.1
+NEIGHBOR = 0.0025
 
 try:
     from ultralytics import YOLO
@@ -265,7 +265,7 @@ if __name__ == "__main__":
     # Ensure NEIGHBOR is defined globally if not already
     # This handles cases where the script might be structured differently or NEIGHBOR isn't at the top level.
     if 'NEIGHBOR' not in globals():
-        NEIGHBOR = 0.1 # Default value, matching the original script
+        NEIGHBOR = 0.0025 # Default value, matching the original script
 
     iface = gr.Interface(
         fn=process_images_gradio,
@@ -284,7 +284,7 @@ if __name__ == "__main__":
         description=(
             "1. 输入包含待处理图片的文件夹的 **完整路径**。\n"
             "2. 选择一种 **打码模式**。\n"
-            "3. 如果选择 **像素化模式**，可以调整 **NEIGHBOR 值** (值越小，马赛克格子越大)。\n"
+            "3. 如果选择 **像素化模式**，可以调整 **NEIGHBOR 值** (值越大，马赛克格子越大)。\n"
             "4. 点击 **Submit** 按钮开始处理。\n"
             "处理后的图片将保存到脚本所在目录下的 `output` 文件夹中。请确保目标文件夹可写。"
         ),
