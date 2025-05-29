@@ -36,4 +36,4 @@ The main YOLO model and Implement used in this project is from https://github.co
 
 ## License
 
-APGL-3.0 (same as https://github.com/zhulinyv/Semi-Auto-NovelAI-to-Pixiv.git)
+AGPL-3.0 (same as https://github.com/zhulinyv/Semi-Auto-NovelAI-to-Pixiv.git)
