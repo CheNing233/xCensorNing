@@ -1,0 +1,4 @@
+gradio
+loguru
+ultralytics
+pillow
